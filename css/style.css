@@ -202,6 +202,7 @@ footer label {
 @media (max-width: 384px) {
     .container {
         padding-top: 8em;
+        padding-bottom: 8em;
         flex-direction: column;
         justify-content: flex-start;
         height: 100dvh;
