@@ -163,6 +163,7 @@
     width: 100%;
     background: var(--background-main);
     color: var(--color-main);
+    overflow: hidden;
 }
 
 /* Estilização do footer */
@@ -174,6 +175,7 @@ footer {
     justify-content: flex-end;
     height: 14vh;
     background: black;
+    overflow: hidden;
 }
 
 footer label {
