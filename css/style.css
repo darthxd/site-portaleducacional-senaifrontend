@@ -30,8 +30,9 @@
     justify-content: space-between;
     width: 100%;
     height: 4.5rem;
-    background-color: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .8);
     backdrop-filter: blur(20px);
+    z-index: 999;
 }
 
 .menu > ul {
@@ -124,6 +125,7 @@
     align-items: center;
     justify-content: center;
     width: 40%;
+    z-index: 1;
 }
 
 .conteudo-texto h1 {
@@ -170,11 +172,63 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 20vh;
-    background-color: black;
+    height: 14vh;
+    background: black;
 }
 
 footer label {
     color: white;
     font-family: "Roboto Slab", sans-serif;
+    margin-bottom: 5px;
+}
+
+.contato-itens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contato-itens img {
+    width: 2.5em;
+    margin: 0 5px;
+    transition: all .1s ease-out;
+}
+
+.contato-itens a:hover img {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 384px) {
+    .container {
+        padding-top: 8em;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .conteudo-texto {
+        width: 90%;
+    }
+    .conteudo-texto h1 {
+        font-size: 1.5em;
+    }
+    .conteudo-texto p {
+        font-family: "Poppins", sans-serif;
+        font-size: .8em;
+        text-indent: 3em;
+        text-align: justify;
+        margin-bottom: 1em;
+    }
+    .conteudo-img {
+        width: 70%;
+        margin-left: 0;
+    }
+    footer {
+        height: 10vh;
+    }
+    .contato-itens {
+        margin-bottom: .5em;
+    }
+    .contato-itens img {
+        width: 1.5em;
+    }
 }
