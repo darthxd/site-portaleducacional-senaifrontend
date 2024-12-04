@@ -205,7 +205,6 @@ footer label {
         flex-direction: column;
         justify-content: flex-start;
         height: 100%;
-        padding-bottom: 14svh;
     }
     .conteudo-texto {
         width: 90%;
@@ -221,8 +220,7 @@ footer label {
         margin-bottom: 1em;
     }
     .conteudo-img {
-        width: 50%;
-        margin-left: 0;
+        display: none;
     }
     footer {
         height: fit-content;
