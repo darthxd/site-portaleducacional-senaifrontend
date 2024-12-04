@@ -204,7 +204,6 @@ footer label {
     .container {
         flex-direction: column;
         justify-content: flex-start;
-        height: 100%;
     }
     .conteudo-texto {
         width: 90%;
