@@ -204,7 +204,6 @@ footer label {
         padding-top: 8em;
         flex-direction: column;
         justify-content: flex-start;
-        height: 100dvh;
     }
     .conteudo-texto {
         width: 90%;
@@ -224,13 +223,18 @@ footer label {
         margin-left: 0;
     }
     footer {
-        margin-top: 10dvh;
-        height: 10dvh;
+        height: 12dvh;
     }
     .contato-itens {
         margin-bottom: .5em;
     }
     .contato-itens img {
         width: 1.5em;
+    }
+}
+
+@media (max-height: 650px) {
+    .container {
+        height: 120dvh;
     }
 }
