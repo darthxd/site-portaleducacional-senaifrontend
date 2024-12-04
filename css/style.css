@@ -204,7 +204,7 @@ footer label {
         padding-top: 8em;
         flex-direction: column;
         justify-content: flex-start;
-        max-height: 100vh;
+        max-height: 100dvh;
     }
     .conteudo-texto {
         width: 90%;
