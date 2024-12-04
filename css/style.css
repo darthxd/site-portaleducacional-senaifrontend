@@ -234,9 +234,3 @@ footer label {
         width: 1.5em;
     }
 }
-
-@media (max-height: 650px) {
-    .container {
-        height: 120dvh;
-    }
-}
