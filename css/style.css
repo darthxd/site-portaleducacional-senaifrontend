@@ -202,10 +202,10 @@ footer label {
 
 @media (max-width: 384px) {
     .container {
-        padding-top: 4em;
         flex-direction: column;
         justify-content: flex-start;
         height: 100%;
+        padding-bottom: 14svh;
     }
     .conteudo-texto {
         width: 90%;
