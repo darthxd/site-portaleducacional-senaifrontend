@@ -12,6 +12,7 @@
     --color2-main: #FFD43B;
     --background-main: #fcfcfc;
     --color-main: #0f0f0f;
+    --dark-main: #202020;
 }
 
 .dark-mode {
@@ -19,6 +20,7 @@
     --color2-main: #306998; /* #4B8BBE */
     --background-main: #202020;
     --color-main: #fcfcfc;
+    --dark-main: #0f0f0f;
 }
 
 /* Estilização do menu / barra de navegação */
@@ -30,8 +32,7 @@
     justify-content: space-between;
     width: 100%;
     height: 4.5rem;
-    background: rgba(0, 0, 0, .8);
-    backdrop-filter: blur(20px);
+    background: var(--dark-main);
     z-index: 999;
 }
 
@@ -68,6 +69,7 @@
     align-items: center;
     justify-content: center;
     margin-left: 30px;
+    z-index: 998;
 }
 
 .logo img {
@@ -110,13 +112,7 @@
 
 /* Estilização do menu quando aberto */
 .menu ul.open {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
     top: 3.5rem;
-    width: 100%;
-    height: 25svh;
-    background: rgba(0, 0, 0, .8);
 }
 
 .menu ul.open li {
@@ -125,11 +121,11 @@
     justify-content: center;
     width: 100%;
     height: fit-content;
+    margin: 10px 0;
 }
 
 .menu ul.open li a {
     padding: 0;
-    margin-bottom: 30px;
     font-size: 1rem;
 }
 
@@ -338,7 +334,18 @@ footer label {
 
 @media (max-width: 560px) {
     .menu > ul {
-        display: none;
+        position: absolute;
+        top: -20rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 25svh;
+        background: rgba(0, 0, 0, .9);
+        opacity: 90%;
+        transition: top .1s ease-out;
+        z-index: -1;
     }
     .btnMenu {
         display: flex;

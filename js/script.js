@@ -7,6 +7,14 @@ chkMenu.addEventListener("change", () => {
     menu.getElementsByTagName("ul")[0].classList.toggle("open")
 })
 
+window.onresize = menuReset
+
+function menuReset() {
+    if(window.matchMedia("(min-width: 560px)").matches) {
+        menu.getElementsByTagName("ul")[0].classList.remove("open")
+    }
+}
+
 chkDarkMode.addEventListener('change', () => {
     document.body.classList.toggle("dark-mode")
     for(const item of document.body.getElementsByTagName("*")){
