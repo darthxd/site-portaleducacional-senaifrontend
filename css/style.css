@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --color1-main: #306998;
+    --color2-main: #FFD43B;
+    --background-main: #fcfcfc;
+    --color-main: #0f0f0f;
+}
+
+.dark-mode {
+    --color1-main: #FFD43B; /* #FFE873 */
+    --color2-main: #306998; /* #4B8BBE */
+    --background-main: #202020;
+    --color-main: #fcfcfc;
+}
+
+/* Estilização do menu / barra de navegação */
+
+.menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 4.5rem;
+    background-color: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(20px);
+}
+
+.menu > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.menu > ul > li {
+    margin-left: 30px;
+}
+
+.menu > ul > li > a {
+    display: flex;
+    box-sizing: content-box;
+    padding: 20px;
+    cursor: pointer;
+    color: #fcfcfc;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    font-size: 1rem;  
+    position: relative;
+    transition: all .1s ease-out;
+}
+
+.menu > ul > li > a:hover {
+    color: var(--color2-main);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.logo img {
+    height: 3.8em;
+}
+
+.logo label {
+    color: #fcfcfc;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Estilização do botão de modo escuro */
+
+.btnDarkMode {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+    padding: 1px;
+    width: 45px;
+    height: 26px;
+    background: rgba(255, 255, 255, .25);
+    border-radius: 15px;
+}
+
+#chkDarkMode {
+    display: none;
+}
+
+.chkBola {
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    transition: all .2s ease-out;
+    background: url("../img/sol.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+}
+
+#chkDarkMode:checked + .chkBola {
+    transform: translateX(18px);
+    background: url("../img/lua.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+}
+
+.conteudo-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.conteudo-texto h1 {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 2.5em;
+    font-weight: bolder;
+    margin-bottom: 1em;
+}
+
+.conteudo-texto a {
+    color: var(--color1-main);
+}
+
+.conteudo-texto p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2em;
+    text-indent: 3em;
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+.conteudo-img {
+    width: 30%;
+    margin-left: 4em;
+}
+
+/* Estilização dos containers principais do site */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4.5rem;
+    height: 100vh;
+    width: 100%;
+    background: var(--background-main);
+    color: var(--color-main);
+}
+
+/* Estilização do footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20vh;
+    background-color: black;
+}
+
+footer label {
+    color: white;
+}
