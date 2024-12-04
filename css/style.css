@@ -71,7 +71,7 @@
 }
 
 .logo img {
-    height: 3.8em;
+    height: 3.8rem;
 }
 
 .logo label {
@@ -80,6 +80,57 @@
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
+}
+
+/* Estilização do botão de menu, quando o site estiver sendo acessado em um celular */
+.btnMenu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.btnMenu > label {
+    height: 1.8rem;
+    width: 1.8rem;
+    cursor: pointer;
+    background: white;
+    mask-image: url("../img/linhas.svg");
+    mask-repeat: no-repeat;
+    transition: all .1s ease-out;
+}
+
+.btnMenu > label:hover {
+    background: var(--color2-main);
+}
+
+#chkMenu {
+    display: none;
+}
+
+/* Estilização do menu quando aberto */
+.menu ul.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 3.5rem;
+    width: 100%;
+    height: 25svh;
+    background: rgba(0, 0, 0, .8);
+}
+
+.menu ul.open li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.menu ul.open li a {
+    padding: 0;
+    margin-bottom: 30px;
+    font-size: 1rem;
 }
 
 /* Estilização do botão de modo escuro */
@@ -103,7 +154,7 @@
 .chkBola {
     width: 20px;
     height: 20px;
-    margin-left: 3px;
+    margin: 3px;
     transition: all .2s ease-out;
     background: url("../img/sol.svg");
     background-position: center;
@@ -220,6 +271,28 @@ footer label {
 }
 
 @media (max-width: 800px) {
+    .menu {
+        height: 3.5rem;
+    }
+    .menu > ul {
+        margin-right: 20px;
+    }
+    .menu > ul > li {
+        margin-left: 5px;
+    }
+    .menu > ul > li > a {
+        font-size: .8rem;  
+    }
+    .logo {
+        margin-left: 20px;
+    }
+    .logo img {
+        height: 2.8em;
+    }
+    .logo label {
+        font-size: .9rem;
+    }
+
     .container {
         padding-top: 8em;
         flex-direction: column;
@@ -247,6 +320,28 @@ footer label {
     }
     .contato-itens img {
         width: 1.5em;
+    }
+    .btnDarkMode {
+        width: 26px;
+    }
+    .chkBola {
+        margin: 3px;
+    }
+    #chkDarkMode:checked + .chkBola {
+        transform: none;
+        background: url("../img/lua.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-clip: padding-box;
+    }
+}
+
+@media (max-width: 560px) {
+    .menu > ul {
+        display: none;
+    }
+    .btnMenu {
+        display: flex;
     }
 }
 
@@ -284,6 +379,9 @@ footer label {
 /* Media Queries para Height */
 
 @media (max-height: 810px) {
+    .container {
+        padding-top: 6em;
+    }
     footer  {
         height: 15svh;
     }
@@ -291,7 +389,7 @@ footer label {
         margin-bottom: 10px;
     }
     .contato-itens img {
-        width: 2em;
+        width: 1.5em;
     }
 }
 

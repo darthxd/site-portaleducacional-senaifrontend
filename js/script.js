@@ -1,6 +1,11 @@
 const chkDarkMode = document.getElementById("chkDarkMode");
+const chkMenu = document.getElementById("chkMenu");
 
 const menu = document.getElementById("menu");
+
+chkMenu.addEventListener("change", () => {
+    menu.getElementsByTagName("ul")[0].classList.toggle("open")
+})
 
 chkDarkMode.addEventListener('change', () => {
     document.body.classList.toggle("dark-mode")
