@@ -159,7 +159,7 @@
     align-items: center;
     justify-content: center;
     padding-top: 4.5rem;
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     background: var(--background-main);
     color: var(--color-main);
@@ -173,7 +173,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 14vh;
+    height: 14svh;
     background: black;
     overflow: hidden;
 }
@@ -225,7 +225,7 @@ footer label {
         margin-left: 0;
     }
     footer {
-        height: 12dvh;
+        height: 12svh;
     }
     .contato-itens {
         margin-bottom: .5em;
