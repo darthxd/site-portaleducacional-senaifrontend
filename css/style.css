@@ -374,8 +374,8 @@ footer label {
     justify-self: start;
 }
 
-#python-oquee {
-    padding-top: 10rem;
+#img-python-logo {
+    max-width: 400px;
 }
 /* Media Queries para Width */
 
@@ -483,7 +483,9 @@ footer label {
     #section-contato {
         padding-top: 3rem
     }
-    
+    .contato {
+        height: 75vh;
+    }
     .conteudo-texto h1 {
         font-size: 1.6em;
     }
