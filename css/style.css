@@ -335,10 +335,10 @@ footer label {
     transition: background .15s ease-out;
 }
 
-
 .buttons input:hover {
     background: #204d72;
 }
+
 
 /* Pagina produto */
 
@@ -374,6 +374,9 @@ footer label {
     justify-self: start;
 }
 
+#python-oquee {
+    padding-top: 10rem;
+}
 /* Media Queries para Width */
 
 @media (max-width: 1200px) {
@@ -381,6 +384,7 @@ footer label {
         padding: 0 50px;
         width: 90%;
     }
+    
     .conteudo-texto h1 {
         font-size: 1.8em;
     }
@@ -431,11 +435,20 @@ footer label {
         min-width: 344px;
     }
     .contato h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         align-self: center;
     }
     .input {
         flex-shrink: 1;
+    }
+    .input label {
+        font-size: 1.2rem;
+    }
+    .input input {
+        font-size: 1.2rem;
+    }
+    .textbox textarea {
+        font-size: 1.2rem;
     }
     .buttons input {
         font-size: 1rem;
@@ -467,6 +480,10 @@ footer label {
         flex-direction: column;
         justify-content: flex-start;
     }
+    #section-contato {
+        padding-top: 3rem
+    }
+    
     .conteudo-texto h1 {
         font-size: 1.6em;
     }
@@ -607,5 +624,15 @@ footer label {
     }
     .contato-itens img {
         width: 1em;
+    }
+    .conteudo {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 90%;
+    }
+    .conteudo-left {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 90%;
     }
 }
