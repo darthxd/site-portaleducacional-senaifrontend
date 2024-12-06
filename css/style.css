@@ -61,7 +61,7 @@
 }
 
 .menu > ul > li > a:hover {
-    color: var(--color2-main);
+    color: #FFD43B;
 }
 
 .logo {
@@ -241,16 +241,110 @@ footer label {
 .contato-itens img {
     width: 2.5em;
     margin: 0 5px;
-    transition: all .1s ease-out;
+    transition: all .15s ease-out;
 }
 
 .contato-itens a:hover img {
-    transform: translateY(-5px);
+    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, .8));
+}
+
+/* Formulário de contato */
+.contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 45%;
+    height: 80vh;
+    min-width: 800px;
+    padding: 0 100px;
+}
+
+.contato h1 {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 2.5rem;
+    align-self: flex-start;
+    margin-bottom: 2rem;
+}
+
+.input {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input label {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    margin-bottom: .5rem;
+}
+
+.input input {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background: var(--background-main);
+    color: var(--color-main);
+}
+
+.textbox textarea {
+    resize: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    width: 100%;
+    height: 25vh;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 1px solid grey;
+    background: var(--background-main);
+    color: var(--color-main);
+}
+
+.textbox textarea:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8vh;
+    min-height: 60px;
+    margin-top: 2rem;
+}
+
+.buttons input {
+    width: 49%;
+    height: 100%;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #306998;
+    color: white;
+    transition: background .15s ease-out;
+}
+
+
+.buttons input:hover {
+    background: #204d72;
 }
 
 /* Media Queries para Width */
 
 @media (max-width: 1200px) {
+    .contato {
+        padding: 0 50px;
+        width: 90%;
+    }
     .conteudo-texto {
         width: 50%;
     }
@@ -267,6 +361,21 @@ footer label {
 }
 
 @media (max-width: 800px) {
+    .contato {
+        padding: 0 10px;
+        width: 100%;
+        min-width: 344px;
+    }
+    .contato h1 {
+        font-size: 2rem;
+        align-self: center;
+    }
+    .input {
+        flex-shrink: 1;
+    }
+    .buttons input {
+        font-size: 1rem;
+    }
     .menu {
         height: 3.5rem;
     }
@@ -386,6 +495,11 @@ footer label {
 /* Media Queries para Height */
 
 @media (max-height: 810px) {
+    .contato {
+        height: 100vh;
+        min-height: fit-content;
+        padding: 40px 10px;
+    }
     .container {
         padding-top: 6em;
     }

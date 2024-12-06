@@ -9,8 +9,12 @@
     <link rel="icon" href="../img/python-icon.png" type="image/x-icon">
 </head>
 <body>
+
+    <!-- Header com menu de navegação -->
     <header>
         <nav id="menu" class="menu">
+
+            <!-- Logo do site -->
             <div class="logo">
                 <a href="../index.html#"><img src="../img/python-icon.png" title="Aprender Python"></a>
                 <a href="../index.html#"><label>Aprender Python</label></a>
@@ -19,10 +23,14 @@
                     <label for="chkDarkMode" class="chkBola"></label>
                 </div>
             </div>  
+
+            <!-- Botão para abrir e fechar menu em dispositivos móveis-->
             <div class="btnMenu">
                 <input type="checkbox" name="chkMenu" id="chkMenu">
                 <label for="chkMenu"></label>
             </div>
+
+            <!-- Menu de navegação-->
             <ul>
                 <li><a href="./produto.html">Produto</a></li>
                 <li><a href="./sobre.html">Sobre</a></li>
@@ -31,8 +39,24 @@
         </nav>
     </header>
     <section id="container" class="container">
-        contato
+        <form action="#" class="contato">
+            <h1>Fale com a gente!</h1>
+            <div class="input">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Seu e-mail">
+            </div>
+            <div class="input textbox">
+                <label for="msg">Sua mensagem:</label>
+                <textarea name="msg" id="msg" cols="30" rows="10" ></textarea>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar mensagem">
+            </div>
+        </form>
     </section>
+
+    <!-- Footer -->
     <footer>
         <div class="contato-itens">
             <a href=""><img src="../img/instagram.svg"></a>
